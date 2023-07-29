@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matric Units</title>
+    <link rel="stylesheet" href="BMI.css">
+</head>
+<body>
+    <h2>BMI in Metric Units</h2>
+    <h4>Click <b>Compute</b> button and your BMI will appear below.</h4>
+
+    <div class="input-fields">
+        <label for="kg">Weight : </label>
+        <input type="number" placeholder="kg" id="kg">
+        <br>
+        <br>
+        <label for="meter">Height : </label>
+        <input type="number" placeholder="meter" id="meter">
+        <br>
+        <br>
+        <button type="button" class="btn">Calculate</button>
+       <h3 class="result"></h3>
+    </div>
+
+    
+    <script>
+       
+        let btn=document.querySelector('.btn');
+        let res=document.querySelector('.result');
+         btn.addEventListener('click',function(){
+        let KG= parseFloat(document.getElementById('kg').value);
+        let Meter=parseFloat(document.getElementById('meter').value);
+        let BMI = KG/(Meter * Meter);
+        let unit='kg/m^2';
+        if(isNaN(KG) || isNaN(Meter)){
+            res.innerHTML=`Kindly Enter valid Value`;
+        }
+        else{
+            if(BMI<=18){
+                res.innerHTML=`Your BMI is ${BMI} ${unit}. You are underweight.`;
+            }
+            else if(BMI>18 && BMI<=25){
+                res.innerHTML=`Your BMI is ${BMI} ${unit}. You are healthy.`;
+            }
+            else if(BMI>25 && BMI<=30){
+                res.innerHTML=`Your BMI is ${BMI} ${unit}. You are overweight.`;
+            }
+            else{
+                res.innerHTML=`Your BMI is ${BMI} ${unit} kg/m2. You are obesity.`;
+
+            }
+        }
+         });
+    </script>
+</body>
+</html>

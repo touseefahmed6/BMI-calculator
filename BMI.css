@@ -1,0 +1,63 @@
+
+.BMI-Details h3{
+    color: rgb(7, 7, 112);
+}
+body h4{
+    color: rgb(7, 7, 112);
+}
+
+.sMethod a{
+    text-decoration: none;
+    background-color: blueviolet;
+    color: white;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+.sMethod a:hover{
+    background-color: white;
+    color: black;
+}
+.input-fields label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 10px;
+    font-size: 20px;
+    color: black;
+}
+.input-fields input{
+    font-size: 20px;
+}
+.input-fields{
+    margin: 150px;
+}
+.input-fields .btn{
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    margin-left: 228px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+.input-fields .btn:hover{
+    color: white;
+    background-color: rgb(217, 21, 53);
+}
+ body h2{
+    color: rgb(154, 13, 37);
+    background-color: rgb(131, 122, 122);
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+ }
+ body{
+    background-color: white;
+ }

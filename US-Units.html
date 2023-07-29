@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Us-Unit</title>
+    <link rel="stylesheet" href="BMI.css">
+</head>
+<body>
+    <h2>BMI in Standard Units</h2>
+    <h4>Click <b>Compute</b> button and your BMI will appear below.</h4>
+    <div class="input-fields">
+        <label for="pounds">Weight : </label>
+        <input type="number" placeholder="pounds" id="pounds">
+        <br>
+        <br>
+        <label for="feet">Height :</label>
+        <input type="number" placeholder="feet" id="feet">
+        <input type="number" placeholder="inches" id="inches">
+        <br>
+        <br>
+        <button type="button" class="btn">Compute</button>
+        <h3 class="result"></h3>
+    </div>
+    <script>
+        let btn = document.querySelector('.btn');
+        let res = document.querySelector('.result');
+
+        btn.addEventListener('click', function() {
+            let Pound1 = parseFloat(document.getElementById('pounds').value);
+            let Feet = parseFloat(document.getElementById('feet').value);
+            let Inches = parseFloat(document.getElementById('inches').value);
+            let BMI = (Pound1 / (Feet * Inches)) * 703;
+
+            if (isNaN(Pound1) || isNaN(Feet) || isNaN(Inches)) {
+                res.innerHTML = `Kindly Enter valid Value`;
+            } else {
+                if (BMI <= 18) {
+                    res.innerHTML = `Your BMI is ${BMI}. You are underweight.`;
+                } else if (BMI > 18 && BMI <= 25) {
+                    res.innerHTML = `Your BMI is ${BMI}. You are healthy.`;
+                } else if (BMI > 25 && BMI <= 30) {
+                    res.innerHTML = `Your BMI is ${BMI}. You are overweight.`;
+                } else {
+                    res.innerHTML = `Your BMI is ${BMI}. You are obesity.`;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
